@@ -2,6 +2,13 @@ body {
   margin: 0;
   background-color: blueviolet;
   padding: 0;
+  font-family: "Comic Relief", sans-serif;
+}
+@font-face {
+    font-family: "Comic Relief", sans-serif ;
+    src: url("./fonts/Comic_Relief/ComicRelief-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
 }
 header {
   display: flex;
