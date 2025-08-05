@@ -62,7 +62,7 @@ function toggleOverlay(index = null) {
     if (index !== null) {
         currentIndex = index;
         overlayRef.classList.remove("d_none");
-        overlayImage.src = `${ImagesList[currentIndex]}`;
+        overlayImage.src = `${ImagesList[currentIndex]}`;           //geht OHNE Pfad...weil? 
         overlayTitle.textContent = description[currentIndex];
         document.addEventListener("keydown", escCloseOverlay);
     }
@@ -83,11 +83,13 @@ function showPreviousImage() {
 function OverlayImagesAndTitles() {
     const overlayImage = document.getElementById("overlayImage");
     const overlayTitle = document.getElementById("overlayTitle");
-    overlayImage.src = `${ImagesList[currentIndex]}`;
-    overlayTitle.textContent = description[currentIndex];
+    overlayImage.src = `${ImagesList[currentIndex]}`;              //geht OHNE Pfad.....weil?
+    overlayTitle.textContent = description[currentIndex];          //lern schreiben oder strg C+V   >.<
 }
 function escCloseOverlay(event) {
   if (event.key === 'Escape') {
     toggleOverlay();
   }
 }
+
+// Pfeile img ausbessern...bilder bundy/star_trek/ magnum...neu
