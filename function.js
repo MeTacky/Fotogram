@@ -18,7 +18,7 @@ let description = [
     "Airwolf",
     "Chip und Chap",
     "Die Gummibärenbande",
-    "Eine schrecklich nette Familie",
+    "Eine Familie",
     "Knight Rider",
     "Magnum",
     "Miami Vice",
