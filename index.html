@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotogram</title>
+    <link rel="icon" href="./img/favicon.svg" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="function.js"></script>
+    <style></style>
+  </head>
+  <header>
+    <img class="logogram" src="./img/favicon.png" alt="Fotogram Logo" />
+    <p class="headtitle">Fotogram</p>
+  </header>
+  <body onload="renderImages()">
+    <main>
+      <h1>Serien der 80er</h1>
+
+      <div id="container"></div>
+        <div id="overlay" class="overlay d_none" onclick="toggleOverlay()">
+          <div class="overlay_card" onclick="event.stopPropagation()">
+            <button class="close_button" onclick="toggleOverlay()">✕</button>
+            <div id="overlay_dialog" class="overlay_dialog"><p id="overlayTitle" class="overlay_title"></p>
+              <img
+                id="overlayImage"
+                class="overlay_image"/>
+                
+                <div class="overlay_arrows sticky_arrows">
+              <button onclick="showPreviousImage()" class="button_left">
+                <img
+                  class="arrow_left"
+                  src="./img/linker-pfeil.png"
+                  alt="Show previous image"
+                />
+              </button>
+              <button onclick="showNextImage()" class="button_right">
+                <img
+                  class="arrow_right"
+                  src="./img/pfeil-zeigt-nach-rechts.png"
+                  alt="Show next image"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+    <footer>
+      <div class="footer_links">
+        <a href="./Impressum/impressum.html">Impressum</a>
+        <div class="seperator"></div>
+        <a href="./Datenschutz/Datenschutz.html">Datenschutz</a>
+      </div>
+    </footer>
+  </body>
+</html>
