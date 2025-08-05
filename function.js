@@ -4,7 +4,7 @@ let ImagesList = [
     "./img/airwolf.jpg",
     "./img/Chip-und-Chap-Die-Ritter-des-Rechts.l.jpg",
     "./img/Die-Gummibaerenbande.jpg",
-    "./img/Eine_schrecklich_nette_Familie_Logo.svg.png",
+    "./img/Eine_schrecklich_nette_Familie1.jpg",
     "./img/knight_rider.jpg",
     "./img/magnum.jpg",
     "./img/miami.jpeg",
