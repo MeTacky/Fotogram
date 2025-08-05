@@ -59,7 +59,7 @@ h1 {
 .img:hover {
   scale: 1.2;
   filter: drop-shadow(10px 10px 5px #01010c);
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .single_element {
   display: flex;
