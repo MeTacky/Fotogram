@@ -45,6 +45,7 @@ function renderImages() {
 }
 window.onload = renderImages;
 
+
 function creatDialogContent(i) {
     toggleOverlay();
     let dialogRef = document.getElementById("overlay_dialog");
@@ -73,14 +74,14 @@ function toggleOverlay(index = null) {
 }
 function showNextImage() {
     currentIndex = (currentIndex + 1) % ImagesList.length;
-    OverlayImagesAndTitles();
+    OverlayImagesTitles();
 }
 function showPreviousImage() {
     currentIndex =
         (currentIndex - 1 + ImagesList.length) % ImagesList.length;
-    OverlayImagesAndTitles();
+    OverlayImagesTitles();
 }
-function OverlayImagesAndTitles() {
+function OverlayImagesTitles() {
     const overlayImage = document.getElementById("overlayImage");
     const overlayTitle = document.getElementById("overlayTitle");
     overlayImage.src = `${ImagesList[currentIndex]}`;              //geht OHNE Pfad.....weil?
