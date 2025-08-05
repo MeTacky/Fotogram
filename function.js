@@ -8,7 +8,7 @@ let ImagesList = [
     "./img/knight_rider.jpg",
     "./img/magnum.jpg",
     "./img/miami.jpeg",
-    "./img/star_trek.jpg",
+    //"./img/startrek.jpg",   erstellt sich einen div um das img
     "./img/street_hawk.jpg"
 ];
 
@@ -22,7 +22,7 @@ let description = [
     "Knight Rider",
     "Magnum",
     "Miami Vice",
-    "Star Trek",
+    //"Star Trek",
     "Street Hawk"
 ];
 
