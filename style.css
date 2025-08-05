@@ -3,13 +3,18 @@ body {
   background-color: blueviolet;
   padding: 0;
   font-family: "Comic Relief", sans-serif;
+  max-width: 1440px; 
+  margin-left: auto;
+  margin-right: auto;
 }
+
 @font-face {
-  font-family: "Comic Relief", sans-serif;
-  src: url("./fonts/Comic_Relief/ComicRelief-Regular.ttf");
+  font-family: "Comic Relief";
+  src: url("./fonts/Comic_Relief/ComicRelief-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
+
 header {
   display: flex;
   justify-content: flex-start;
@@ -18,59 +23,72 @@ header {
   background-color: rgb(74, 5, 121);
   height: 150px;
   width: 100%;
-  box-shadow: 0 0 30px 0 rgb(0, 0, 0, 0.9);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9);
+  max-width: 1440px; 
+  margin: 0;
 }
+
 .logogram {
   height: 100px;
   width: 100px;
   margin-left: 80px;
 }
+
 .headtitle {
   color: #a0f0fd;
   font-size: 60px;
   font-weight: bold;
 }
+
 main {
   flex: 1;
+  max-width: 1440px; 
+  margin: 0 auto;
 }
+
 h1 {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 60px;
   color: #f78a4c;
 }
+
 #container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 100px;
   justify-content: center;
+  max-width: 1440px; 
+  margin: 0 auto;
 }
 
 .img {
-   height: 300px;
+  height: 300px;
   width: 200px;
   border-radius: 10px;
   object-fit: cover;
-  transition: scale 200ms ease, color 200ms ease-in-out;
+  transition: scale 200ms ease, filter 200ms ease-in-out;
 }
 
 .img:hover {
   scale: 1.2;
   filter: drop-shadow(10px 10px 5px #01010c);
-  cursor: pointer !important;
+  cursor: pointer;
 }
+
 .single_element {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .overlay_dialog {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vh;
   max-height: 80vh;
   padding: 10px;
 }
@@ -82,12 +100,14 @@ h1 {
   text-align: center;
   color: black;
 }
+
 .sticky_arrows {
   margin-top: 60px;
   display: flex;
   justify-content: center;
   gap: 160px;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -108,7 +128,6 @@ h1 {
   border-radius: 10px;
   max-width: 60%;
   max-height: 90%;
-  box-shadow: 80px 80px 100px black;
 }
 
 .overlay_image {
@@ -118,6 +137,7 @@ h1 {
   height: 60vh;
   object-fit: cover;
 }
+
 .d_none {
   display: none;
 }
@@ -130,6 +150,7 @@ h1 {
   border-radius: 100%;
   background-color: blueviolet;
 }
+
 .close_button {
   position: absolute;
   top: 10px;
@@ -140,49 +161,88 @@ h1 {
   color: #f64e85;
   cursor: pointer;
 }
+
 .arrow_left,
 .arrow_right {
   width: 28px;
   height: 28px;
 }
+
 footer {
   background-color: rgb(74, 5, 121);
-  box-shadow: 0 0 30px 0 rgb(0, 0, 0, 0.9);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9);
   height: 150px;
+  width: 100%;
+  max-width: 1440px; 
+  margin: 0 auto;
 }
+
 .footer_links {
   text-decoration: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-@media (max-width: 522px) {
-  .headtitle {
-    font-size: 40px;
-  }
-}
-@media (max-width: 449px) {
-  h1 {
-    text-align: center;
-    font-size: 40px;
-  }
-  .logogram {
-    height: 80px;
-    width: 80px;
-    margin: auto;
-  }
-  .headtitle{
-    padding-right: 16px;
-  }
-}
-@media (max-width:410px){
-    .headtitle{
-        display: none;
-    }
-    .header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  height: 100%;
 }
 
+@media (max-width: 768px) {
+  header {
+    height: 100px;
+    gap: 20px;
+  }
+  .logogram {
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 80px;
+    justify-content: center;
+  }
+  .logogram {
+    height: 50px;
+    width: 50px;
+    margin-left: 0;
+  }
+  .headtitle {
+    font-size: 28px;
+    padding-right: 10px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  #container {
+    padding: 10px;
+    gap: 10px;
+  }
+  .overlay_card {
+    max-width: 95%;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  .overlay_dialog {
+    width: 90%;
+    max-height: 60vh;
+  }
+  .overlay_image {
+    max-height: 40vh;
+  }
+  .overlay_title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .sticky_arrows {
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .button_left,
+  .button_right {
+    padding: 6px 10px;
+  }
+  footer {
+    height: 80px;
+  }
+}

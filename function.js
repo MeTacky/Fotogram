@@ -43,18 +43,18 @@ function renderImages() {
         container.innerHTML += getImagesHtml(i);
     }
 }
-window.onload = renderImages;
-
 
 function creatDialogContent(i) {
     toggleOverlay();
     let dialogRef = document.getElementById("overlay_dialog");
     dialogRef.innerHTML = getImageInDialogHtml(i);
 }
+
 function toggleOverlay() {
     let overlayRef = document.getElementById("overlay");
     overlayRef.classList.toggle("d_none");
 }
+
 function toggleOverlay(index = null) {
     let overlayRef = document.getElementById("overlay");
     let overlayImage = document.getElementById("overlayImage");
@@ -63,7 +63,7 @@ function toggleOverlay(index = null) {
     if (index !== null) {
         currentIndex = index;
         overlayRef.classList.remove("d_none");
-        overlayImage.src = `${ImagesList[currentIndex]}`;           //geht OHNE Pfad...weil? 
+        overlayImage.src = `${ImagesList[currentIndex]}`;          
         overlayTitle.textContent = description[currentIndex];
         document.addEventListener("keydown", escCloseOverlay);
     }
@@ -72,25 +72,28 @@ function toggleOverlay(index = null) {
         document.removeEventListener("keydown", escCloseOverlay);
     }
 }
+
 function showNextImage() {
     currentIndex = (currentIndex + 1) % ImagesList.length;
     OverlayImagesTitles();
 }
+
 function showPreviousImage() {
     currentIndex =
         (currentIndex - 1 + ImagesList.length) % ImagesList.length;
     OverlayImagesTitles();
 }
+
 function OverlayImagesTitles() {
     const overlayImage = document.getElementById("overlayImage");
     const overlayTitle = document.getElementById("overlayTitle");
-    overlayImage.src = `${ImagesList[currentIndex]}`;              //geht OHNE Pfad.....weil?
-    overlayTitle.textContent = description[currentIndex];          //lern schreiben oder strg C+V   >.<
+    overlayImage.src = `${ImagesList[currentIndex]}`;              
+    overlayTitle.textContent = description[currentIndex];         
 }
+
 function escCloseOverlay(event) {
   if (event.key === 'Escape') {
     toggleOverlay();
   }
 }
 
-// Pfeile img ausbessern...bilder bundy/star_trek/ magnum...neu
