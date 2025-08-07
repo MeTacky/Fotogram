@@ -15,7 +15,7 @@ body {
 .header_begrenzung {
   display: flex;
   justify-content: center;
-  width: 100%;
+  
 }
 
 header {
@@ -25,11 +25,15 @@ header {
   gap: 50px;
   background-color: rgb(74, 5, 121);
   height: 150px;
-  width: 100%;
   max-width: 1440px;
+  width: 100%;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.9);
-}
 
+}
+.content_begrenzung{
+  max-width: 1440px;
+  width: 100%;
+}
 .logogram {
   height: 100px;
   width: 100px;
@@ -184,8 +188,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  max-width: 1440px;
-  width: 100%;
+  box-sizing: border-box;
 }
 a {
   color: #f78a4c;
