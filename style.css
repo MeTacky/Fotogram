@@ -242,7 +242,6 @@ a {
   }
   .overlay_dialog {
     width: 90%;
-    max-height: 60vh;
   }
   .overlay_image {
     max-height: 40vh;
